@@ -4,9 +4,10 @@ export default function Badge({children, theme, shape, className,style, ...rest}
     let bgColor=""
     let fontColor=""
 
-    let chosenBadge=badgeColors.find(ele=>ele.theme===theme)
-    bgColor=chosenBadge.bgColor
-    fontColor=chosenBadge.fontColor
+    let chosenBadge=badgeColors.find(ele=>ele.theme===theme)|| null
+    console.log(chosenBadge)
+    bgColor=chosenBadge?chosenBadge.bgColor:"black"
+    fontColor=chosenBadge?chosenBadge.fontColor:"white"
 
     let BadgeStyle={
         backgroundColor:bgColor,
@@ -17,5 +18,5 @@ export default function Badge({children, theme, shape, className,style, ...rest}
     let shapeClass=shape==="pill"?"pill-shape":shape==="curve"?"curve-shape":""
     let badgeClass=`badge ${shapeClass} ${className?className:""}`
 
-    return <div style={BadgeStyle} className={badgeClass} {...rest}>{children}</div>
+    return <span style={BadgeStyle} className={badgeClass} {...rest}>{children}</span>
 }
