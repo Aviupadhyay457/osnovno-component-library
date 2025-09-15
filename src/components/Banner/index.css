@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.banner{
+    display: grid;
+    grid-template-areas: 
+    "icon icon title title title title title"
+    ".... ....  message message message message message";
+    width: fit-content;
+    border:1px solid red;
+}
+.banner-message{
+    grid-area: message;
+    /* border:1px solid red; */
+    font-size: 1rem;
+    
+}
+.banner-icon{
+    grid-area: icon;
+    /* border:1px solid red; */
+}
+
+.banner-title{
+    grid-area:title;
+    /* border:1px solid red; */
+    font-size: 1rem;
+}
