@@ -1,0 +1,37 @@
+export const badgeColors=[
+    {
+        theme:"white",
+        bgColor:"white",
+        fontColor:"black",
+    },
+    {
+        theme:"yellow",
+        bgColor:"#FEF3C7",
+        fontColor:"#92400E",
+    },
+    {
+        theme:"pink",
+        bgColor:"#FEE2E2",
+        fontColor:"#991B1B",
+    },
+    {
+        theme:"light-green",
+        bgColor:"#D1FAE5",
+        fontColor:"#065F46",
+    },
+    {
+        theme:"blue",
+        bgColor:"#E0E7FF",
+        fontColor:"#3730A3",
+    },
+    {
+        theme:"indigo",
+        bgColor:"#EDE9FE",
+        fontColor:"#5B21B6",
+    },
+    {
+        theme:"light-pink",
+        bgColor:"#FCE7F3",
+        fontColor:"#9D174D",
+    },
+]

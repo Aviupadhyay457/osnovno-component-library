@@ -1,0 +1,14 @@
+.badge{
+    display: inline-block;
+    width: fit-content;
+    padding:8px 16px 8px 16px;
+    border-radius: none;
+}
+
+.pill-shape{
+    border-radius: 12px;
+}
+
+.curve-shape{
+    border-radius: 4px;
+}
