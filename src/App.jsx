@@ -4,14 +4,11 @@ import { FaCircleXmark } from "react-icons/fa6";
 
 export default function App(){
   return(
-    <Button>Upload</Button>
+    <Button variant="filled" shape="pill" type="upload">Upload</Button>
   )
 }
 
   
-
-
-
 
 
 

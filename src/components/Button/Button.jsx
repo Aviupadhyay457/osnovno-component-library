@@ -1,5 +1,7 @@
-import React from "react"
 import "./index.css"
+import clsx from 'clsx';
+import React from "react"
+
 
 import { MdDelete } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
@@ -13,10 +15,30 @@ import { FaPlay } from "react-icons/fa";
 import { MdCancel } from "react-icons/md";
 import { FaCheckCircle } from "react-icons/fa";
 
+export default function Button({children, className,style,action, variant, shape, ...rest}){
 
-export default function Button({children, className,style, variant, ...rest}){
+    const actionItems = {
+        delete: "danger",
+        cancel: "danger",
+        edit: "warning",
+        save: "primary",
+        upload: "primary",
+        download: "success",
+        submit: "success",
+        next: "secondary",
+        previous: "secondary",
+        play: "info",
+    }
+    let actionElement=actionItems[action]||"primary"
+    const variantItems={
+        filled:actionElement,
+        outline:`outline-${actionElement}`
+    }
+    shape=["pill","circle","round","rectangle"].includes(shape)?shape:"rectangle"
+    
+    const BtnClass=clsx("btn",shape,actionElement,variantItems[variant], className)
     return(
-        <button>
+        <button className={BtnClass}>
             {children}
         </button>
     )
