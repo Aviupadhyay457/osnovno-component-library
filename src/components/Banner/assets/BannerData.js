@@ -1,6 +1,9 @@
+import { TbBackground } from "react-icons/tb";
+
 export const statusData=[
     {
         statusName:"success",
+
         iconColor:"#34D399",
         titleColor:"#065F46",
         messageColor:"#047857",
@@ -8,6 +11,7 @@ export const statusData=[
     },
     {
         statusName:"warning",
+
         iconColor:"#FBBF24",
         titleColor:"#92400E",
         messageColor:"#B45309",
@@ -15,6 +19,7 @@ export const statusData=[
     },
     {
         statusName:"error",
+
         iconColor:"#F87171",
         titleColor:"#92400E",
         messageColor:"#B45309",
@@ -23,6 +28,7 @@ export const statusData=[
     },
     {
         statusName:"neutral",
+
         iconColor:"#60A5FA",
         titleColor:"#1E40AF",
         messageColor:"#1C51B9",

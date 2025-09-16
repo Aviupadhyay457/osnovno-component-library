@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    /* border: 1px solid red; */
 }
 
 .banner{
@@ -10,21 +11,35 @@
     "icon icon title title title title title"
     ".... ....  message message message message message";
     width: fit-content;
-    border:1px solid red;
+    /* border:1px solid red; */
+    row-gap: 5px;
+    column-gap: 15px;
+    padding: 10px 30px 10px 15px;
+    max-width:800px;
 }
 .banner-message{
     grid-area: message;
     /* border:1px solid red; */
-    font-size: 1rem;
-    
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
 }
 .banner-icon{
     grid-area: icon;
     /* border:1px solid red; */
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
 .banner-title{
     grid-area:title;
-    /* border:1px solid red; */
-    font-size: 1rem;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+
+}
+
+.test{
+    padding:20px;
 }
