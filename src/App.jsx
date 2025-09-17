@@ -1,10 +1,27 @@
 import {Banner} from "./components/Banner/index.js"
-import Button from "./components/Button/Button.jsx";
+import {Button} from "./components/Button/index.js";
 import { FaCircleXmark } from "react-icons/fa6";
+import { FaCloudUploadAlt } from "react-icons/fa";
 
 export default function App(){
   return(
-    <Button variant="filled" shape="pill" type="upload">Upload</Button>
+    <div style={{display:"flex", gap:"10px", padding:"100px", flexDirection:"row", flexWrap:"wrap", background:"lightBlue"}}>
+      <Button  shape="pill" action="delete" color="danger" icon={false} size="lg" iconPosition="top" disabled>
+        <Button.text>Delete</Button.text>
+      </Button>
+      <Button  shape="pill" action="cancel" color="danger" variant="outline" size="sm" iconPosition="bottom">Cancel</Button>
+      <Button  shape="round" action="edit" color="warning" variant="ghost" iconPosition="right"> delete</Button>
+      <Button  shape="circle" action="save" color="success" variant="filled">Save</Button>
+      <Button  shape="pill" action="upload" color="dark" variant="ghost"></Button>
+      <Button  shape="rectangle" action="download" color="primary" variant="filled">download</Button>
+      <Button  shape="round" action="submit" color="info" variant="outline" size="sm">Send Mail</Button>
+      <Button  shape="pill" action="next"  color="dark"  variant="outline" size="lg">Explore</Button>
+      <Button  shape="rectangle" action="previous"  color="info"  variant="ghost">Back</Button>
+      <Button  shape="rectangle" action="play" color="light" variant="outline">Resume</Button>
+      <Button  shape="pill" action="pause" color="danger" variant="filled">Pause</Button>
+      <Button shape="round" size="md">SUBMIT</Button>
+      <Button shape="round" size="lg" action="upload" color="primary" variant="filled" style={{padding:"13px 10px", }}></Button>
+    </div>
   )
 }
 

@@ -4,40 +4,104 @@
     box-sizing: border-box;
 }
 .btn{
-    padding: 12px;
-    font-size: 1rem;
+    
+    
+    border: none;
+    cursor: pointer;
+    width:fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:3px;
+    border-width:0px;
 }
+
+.md{
+    padding: 8px 16px;
+    width: fit-content;
+    height: fit-content;
+    font-size: 1rem;
+    border-style: solid;
+}
+.sm{
+    padding:6px 12px;
+    width:fit-content;
+    height: fit-content;
+    font-size:0.85rem;
+}
+.lg{
+    padding:12px 20px;
+    width:fit-content;
+    height: fit-content;
+    font-size:1.125rem;
+}
+
+
+
 .primary{
     background-color:#007BFF;
     color:#FFFFFF;
+    border:1px solid #007BFF;
+}
+.primary:hover{
+    background-color: #005bbd;
 }
 .secondary{
     background-color:#6C757D;
     color:#FFFFFF; 
+    border-color:#6C757D;
+}
+.secondary:hover{
+    background-color: #50575c;
 }
 .success{
     background-color:#28A745;
     color:#FFFFFF; 
+    border-color:#28A745;
+}
+.success:hover{
+    background-color:#1e7c33 ;
 }
 .danger{
     background-color:#DC3545;
     color:#FFFFFF; 
+    border-color: #DC3545;
+}
+.danger:hover{
+    background-color: #ac1e2b;
 }
 .warning{
     background-color:#FFC107;
     color:#23272B; 
+    border-color:#FFC107;
+}
+.warning:hover{
+    background-color: #c29100;
 }
 .info{
     background-color:#17A2B8;
     color:#FFFFFF; 
+    border-color:#17A2B8;
+}
+.info:hover{
+    background-color:#117888;
 }
 .light{
     background-color:#F8F9FA;
     color:#23272B;
+    border-color:#F8F9FA;
+}
+.light:hover{
+    background-color: #acb8c4;
 }
 .dark{
     background-color:#23272B ;
     color:#F8F9FA;
+    border-color:#23272B;
+}
+.dark:hover{
+    background-color:#15181a ;
 }
 
 .outline-primary{
@@ -57,7 +121,7 @@
     color:#6C757D;
 }
 .outline-secondary:hover{
-    border:#6C757D;
+    background-color:#6C757D;
     color:#F8F9FA;
     border: none;
 }
@@ -74,7 +138,7 @@
 .outline-danger{
     background-color: transparent;
     border:1px solid #DC3545;
-    color: #F8F9FA;
+    color: #DC3545;
 }
 .outline-danger:hover{
     background-color: #DC3545;
@@ -122,15 +186,123 @@
     border:none;
 }
 
+.ghost-primary{
+    background-color: transparent;
+    border:none;
+    color:#007BFF;
+}
+.ghost-primary:hover{
+    background-color: transparent;
+    border:none;
+    scale: 1.15;
+}
+
+.ghost-secondary{
+    background-color: transparent;
+    border:none;
+    color:#6C757D;
+}
+.ghost-secondary:hover{
+    background-color: transparent;
+    border:none;
+    scale: 1.15;
+}
+.ghost-success{
+    background-color: transparent;
+    border:none;
+    color:#28A745;
+}
+.ghost-success:hover{
+    background-color: transparent;
+    border:none;
+    scale: 1.15;
+    }
+.ghost-danger{
+    background-color: transparent;
+    border:none;
+    color: #DC3545;
+}
+.ghost-danger:hover{
+    background-color: transparent;
+    border:none;
+    scale: 1.15;
+}
+.ghost-warning{
+    background-color: transparent;
+    border:none;
+    color:#FFC107;
+    padding: 0px;
+}
+.ghost-warning:hover{
+    background-color: transparent;
+    border:none;
+    scale: 1.15;
+    }
+.ghost-info{
+    background-color: transparent;
+    border:none;
+    color:#17A2B8;
+}
+.ghost-info:hover{
+    background-color: transparent;
+    border:none;
+    scale: 1.15;
+}
+.ghost-light{
+    background-color: transparent;
+    border:none;
+    color:#F8F9FA;
+}
+.ghost-light:hover{
+    background-color: transparent;
+    border:none;
+    scale: 1.15;
+}
+.ghost-dark{
+    background-color: transparent;
+    border:none;
+    color:#23272B;
+}
+.ghost-dark:hover{
+    background-color: transparent;
+    border:none;
+    scale: 1.15;
+    }
+
 .pill{
     border-radius:9999px;
 }
 .circle{
     border-radius:50%;
+    width: fit-content;
+    height: fit-content;
+    aspect-ratio: 1/1;
 }  
 .round{
-    border-radius:4px
+    
+    border-radius:4px;
 }
 .rectangle{
     border-radius: 0px;
+}
+
+.iconPosition-right{
+    flex-direction: row-reverse;
+
+}
+.iconPosition-left{
+    flex-direction: row;
+    
+}
+.iconPosition-top{
+    flex-direction: column;
+}
+.iconPosition-bottom{
+    flex-direction: column-reverse;
+}
+
+.disabled{
+    opacity: 0.5;
+    cursor:not-allowed;
+    pointer-events: none;
 }
