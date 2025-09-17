@@ -2,15 +2,20 @@ import {Banner} from "./components/Banner/index.js"
 import {Button} from "./components/Button/index.js";
 import { FaCircleXmark } from "react-icons/fa6";
 import { FaCloudUploadAlt } from "react-icons/fa";
-
+import { MdCancel } from "react-icons/md";
+import ButtonIcon from "./components/Button/ButtonIcon.jsx";
 export default function App(){
   return(
     <div style={{display:"flex", gap:"10px", padding:"100px", flexDirection:"row", flexWrap:"wrap", background:"lightBlue"}}>
-      <Button  shape="pill" action="delete" color="danger" icon={false} size="lg" iconPosition="top" disabled>
+      <Button  shape="pill" action="delete" color="danger" icon={false} size="lg" iconPosition="left" >
+        <Button.icon><FaCloudUploadAlt/></Button.icon>
         <Button.text>Delete</Button.text>
       </Button>
-      <Button  shape="pill" action="cancel" color="danger" variant="outline" size="sm" iconPosition="bottom">Cancel</Button>
-      <Button  shape="round" action="edit" color="warning" variant="ghost" iconPosition="right"> delete</Button>
+      <Button  shape="pill" action="cancel" color="danger" variant="outline" size="sm" iconPosition="bottom">
+        <Button.text>Cancel</Button.text>
+        <Button.icon><MdCancel/></Button.icon>
+      </Button>
+      {/* <Button  shape="round" action="edit" color="warning" variant="ghost" iconPosition="right"> delete</Button>
       <Button  shape="circle" action="save" color="success" variant="filled">Save</Button>
       <Button  shape="pill" action="upload" color="dark" variant="ghost"></Button>
       <Button  shape="rectangle" action="download" color="primary" variant="filled">download</Button>
@@ -18,8 +23,10 @@ export default function App(){
       <Button  shape="pill" action="next"  color="dark"  variant="outline" size="lg">Explore</Button>
       <Button  shape="rectangle" action="previous"  color="info"  variant="ghost">Back</Button>
       <Button  shape="rectangle" action="play" color="light" variant="outline">Resume</Button>
-      <Button  shape="pill" action="pause" color="danger" variant="filled">Pause</Button>
-      <Button shape="round" size="md">SUBMIT</Button>
+      <Button  shape="pill" action="pause" color="danger" variant="filled">Pause</Button> */}
+      <Button shape="round" size="md">
+        <ButtonIcon><FaCloudUploadAlt/></ButtonIcon>
+      </Button>
       <Button shape="round" size="lg" action="upload" color="primary" variant="filled" style={{padding:"13px 10px", }}></Button>
     </div>
   )

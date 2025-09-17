@@ -14,12 +14,16 @@ import { FaRegPauseCircle } from "react-icons/fa";
 import { FaPlay } from "react-icons/fa";
 import { MdCancel } from "react-icons/md";
 import { IoSendSharp } from "react-icons/io5";
+import ButtonIcon from "./ButtonIcon";
+import ButtonText from "./ButtonText";
+
+
 
 export default function Button({children, className,style,action="submit",color="primary",variant="filled", shape="rectangle",icon=true,size="md",iconPosition="top" ,...rest}){
 
 
     let restObj={...rest}
-    console.log(restObj.disabled)
+    // console.log(restObj.disabled)
     action=["delete","cancel","edit","save","upload","download","submit","next","previous","play","pause"].includes(action)?action:"submit"
     color=["primary","secondary","success","danger","warning","info","light","dark"].includes(color)?color:"dark"
     shape=["pill","circle","round","rectangle"].includes(shape)?shape:"rectangle"
@@ -38,8 +42,35 @@ export default function Button({children, className,style,action="submit",color=
     const iconSizeStyle={
         fontSize:size==="sm"?"1rem":size==="lg"?"1.5rem":"1.25rem"
     }
-    console.log(style)
+    // console.log(style)
     const BtnClass=clsx("btn",action,color,shape,variant, size, `iconPosition-${iconPosition}`, className, restObj.disabled &&"disabled")
+
+    const btnChildren=React.Children.toArray(children)
+    const countBtnChild=btnChildren.length
+    const isBtnChildButtonIcon=btnChildren.some(child=>child.type===ButtonIcon)
+    const isBtnChildButtonText=btnChildren.some(child=>child.type===ButtonText)
+
+    
+    // console.log(isBtnChildButtonIcon)
+    if(isBtnChildButtonIcon){
+        icon=false
+    }
+    if(countBtnChild===1){
+        if(!isBtnChildButtonIcon && !isBtnChildButtonText){
+            throw new Error("Button can only have either of <ButtonIcon> or <ButtonText>")
+        }
+    }
+    if(countBtnChild===2 ){
+        if(!isBtnChildButtonIcon || !isBtnChildButtonText){
+            throw new Error("Button can only have one <ButtonIcon> and one <ButtonText>. Remove extra children.")
+        }
+    }
+
+    if(countBtnChild>2){
+        throw new Error("Button received too many children. Allowed: <ButtonIcon> + <ButtonText> only.")
+        
+    }
+
     return(
         <button className={BtnClass} style={style} {...rest}>
             {
@@ -70,7 +101,9 @@ export default function Button({children, className,style,action="submit",color=
                 )
                 
             }
-            {children}
+                {children}
+
         </button>
     )
 }
+
