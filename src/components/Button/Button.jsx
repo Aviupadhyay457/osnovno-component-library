@@ -19,7 +19,7 @@ import ButtonText from "./ButtonText";
 
 
 
-export default function Button({children, className,style,action="submit",color="primary",variant="filled", shape="rectangle",icon=true,size="md",iconPosition="top" ,...rest}){
+export default function Button({children, className,style,action="submit",color="primary",variant="filled", shape="rectangle",icon=true,size="md",iconPosition="left" ,...rest}){
 
 
     let restObj={...rest}
@@ -55,11 +55,11 @@ export default function Button({children, className,style,action="submit",color=
     if(isBtnChildButtonIcon){
         icon=false
     }
-    if(countBtnChild===1){
-        if(!isBtnChildButtonIcon && !isBtnChildButtonText){
-            throw new Error("Button can only have either of <ButtonIcon> or <ButtonText>")
-        }
-    }
+    // if(countBtnChild===1){
+    //     if(!isBtnChildButtonIcon && !isBtnChildButtonText){
+    //         throw new Error("Button can only have either of <ButtonIcon> or <ButtonText>")
+    //     }
+    // }
     if(countBtnChild===2 ){
         if(!isBtnChildButtonIcon || !isBtnChildButtonText){
             throw new Error("Button can only have one <ButtonIcon> and one <ButtonText>. Remove extra children.")

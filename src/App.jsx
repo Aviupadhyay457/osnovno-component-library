@@ -15,17 +15,30 @@ export default function App(){
         <Button.text>Cancel</Button.text>
         <Button.icon><MdCancel/></Button.icon>
       </Button>
-      {/* <Button  shape="round" action="edit" color="warning" variant="ghost" iconPosition="right"> delete</Button>
-      <Button  shape="circle" action="save" color="success" variant="filled">Save</Button>
+      <Button  shape="round" action="edit" color="warning" variant="ghost" iconPosition="right">
+        <Button.text>delete</Button.text>
+      </Button>
+      <Button  shape="circle" action="save" color="success" variant="filled">
+       <Button.text>save</Button.text>
+      </Button>
       <Button  shape="pill" action="upload" color="dark" variant="ghost"></Button>
-      <Button  shape="rectangle" action="download" color="primary" variant="filled">download</Button>
-      <Button  shape="round" action="submit" color="info" variant="outline" size="sm">Send Mail</Button>
-      <Button  shape="pill" action="next"  color="dark"  variant="outline" size="lg">Explore</Button>
-      <Button  shape="rectangle" action="previous"  color="info"  variant="ghost">Back</Button>
-      <Button  shape="rectangle" action="play" color="light" variant="outline">Resume</Button>
-      <Button  shape="pill" action="pause" color="danger" variant="filled">Pause</Button> */}
+      <Button  shape="rectangle" action="download" color="primary" variant="filled">
+        <Button.text>download</Button.text>
+      </Button>
+      <Button  shape="round" action="submit" color="info" variant="outline" size="sm">
+        <Button.text>Send Mail</Button.text>
+      </Button>
+      <Button  shape="pill" action="next"  color="dark"  variant="outline" size="lg">
+        <Button.text>Explore</Button.text>
+      </Button>
+      <Button  shape="rectangle" action="previous"  color="info"  variant="ghost"></Button>
+      <Button  shape="rectangle" action="play" color="light" variant="outline" icon={false}>
+        <Button.text>Resume</Button.text>
+      </Button>
+      <Button  shape="pill" action="pause" color="danger" variant="filled">
+        <Button.text>Pause</Button.text>
+      </Button>
       <Button shape="round" size="md">
-        <ButtonIcon><FaCloudUploadAlt/></ButtonIcon>
       </Button>
       <Button shape="round" size="lg" action="upload" color="primary" variant="filled" style={{padding:"13px 10px", }}></Button>
     </div>
