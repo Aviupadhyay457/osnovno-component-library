@@ -50,16 +50,41 @@ export default function Button({children, className,style,action="submit",color=
     const isBtnChildButtonIcon=btnChildren.some(child=>child.type===ButtonIcon)
     const isBtnChildButtonText=btnChildren.some(child=>child.type===ButtonText)
 
-    
+    // console.log(btnChildren)
     // console.log(isBtnChildButtonIcon)
     if(isBtnChildButtonIcon){
         icon=false
     }
-    // if(countBtnChild===1){
+
+    // function wrapperHasBtnElements(){
+    //         if(countBtnChild===1){
     //     if(!isBtnChildButtonIcon && !isBtnChildButtonText){
-    //         throw new Error("Button can only have either of <ButtonIcon> or <ButtonText>")
+    //         console.log(btnChildren)
+    //         console.log(btnChildren[0].props.children.length)
+    //         if(btnChildren[0].props.children.length===2){
+    //             let myBtnChildren=[ButtonIcon,ButtonText]
+    //             if(myBtnChildren.includes(ButtonIcon)&& myBtnChildren.includes(ButtonText)){
+    //                 return 1
+    //             }
+    //             else return 0
+    //         }
+    //     }
     //     }
     // }
+
+    // if(!wrapperHasBtnElements){
+    //     throw new Error(``)
+    // }
+
+    if(countBtnChild==1){
+        if(!isBtnChildButtonIcon && !isBtnChildButtonText){
+            throw new Error("Button can only have either of <ButtonIcon> or <ButtonText>")
+        }
+    }
+
+
+
+
     if(countBtnChild===2 ){
         if(!isBtnChildButtonIcon || !isBtnChildButtonText){
             throw new Error("Button can only have one <ButtonIcon> and one <ButtonText>. Remove extra children.")

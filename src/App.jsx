@@ -4,6 +4,7 @@ import { FaCircleXmark } from "react-icons/fa6";
 import { FaCloudUploadAlt } from "react-icons/fa";
 import { MdCancel } from "react-icons/md";
 import ButtonIcon from "./components/Button/ButtonIcon.jsx";
+import ButtonText from "./components/Button/ButtonText.jsx";
 export default function App(){
   return(
     <div style={{display:"flex", gap:"10px", padding:"100px", flexDirection:"row", flexWrap:"wrap", background:"lightBlue"}}>
@@ -18,7 +19,7 @@ export default function App(){
       <Button  shape="round" action="edit" color="warning" variant="ghost" iconPosition="right">
         <Button.text>delete</Button.text>
       </Button>
-      <Button  shape="circle" action="save" color="success" variant="filled">
+      <Button  shape="round" action="save" color="success" variant="filled" iconPosition="top">
        <Button.text>save</Button.text>
       </Button>
       <Button  shape="pill" action="upload" color="dark" variant="ghost"></Button>
@@ -40,7 +41,10 @@ export default function App(){
       </Button>
       <Button shape="round" size="md">
       </Button>
-      <Button shape="round" size="lg" action="upload" color="primary" variant="filled" style={{padding:"13px 10px", }}></Button>
+      <Button shape="round" size="lg" action="upload" color="primary" variant="filled" style={{padding:"13px 10px", }}>
+          <Button.icon><FaCircleXmark/></Button.icon>
+          <Button.text>Random</Button.text>
+      </Button>
     </div>
   )
 }
